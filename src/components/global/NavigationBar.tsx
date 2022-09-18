@@ -34,7 +34,11 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
             }}
           >
             <Typography
-              sx={{ color: "#FFFFFF", fontWeight: "700", fontSize: "18px" }}
+              sx={{
+                color: "#FFFFFF",
+                fontWeight: "500",
+                fontSize: { md: "24px", xs: "20px" },
+              }}
             >
               Pratik Kapadia
             </Typography>
@@ -42,7 +46,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
               sx={{
                 color: "#FFFFFF",
                 fontWeight: "400",
-                fontSize: "14px",
+                fontSize: { md: "16px", xs: "14px" },
                 display: "flex",
                 alignItems: "center",
               }}
@@ -53,7 +57,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
               sx={{
                 color: "#FFFFFF",
                 fontWeight: "400",
-                fontSize: "14px",
+                fontSize: { md: "16px", xs: "14px" },
                 display: "flex",
                 alignItems: "center",
               }}
