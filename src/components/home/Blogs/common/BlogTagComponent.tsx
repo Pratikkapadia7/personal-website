@@ -1,5 +1,7 @@
 import React from "react";
-import BlogTagsType, { BlogTagsTypeProps } from "../../../type/blogTags.type";
+import BlogTagsType, {
+  BlogTagsTypeProps,
+} from "../../../../type/blogTags.type";
 import { Box, Typography } from "@mui/material";
 
 interface BlogTagComponentProps {
