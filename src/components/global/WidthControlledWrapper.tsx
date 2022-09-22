@@ -11,7 +11,7 @@ const WidthControlledWrapper: React.FC<WidthControlledWrapperProps> = ({
   return (
     <Box
       sx={{
-        maxWidth: "1536px",
+        maxWidth: "1350px",
         width: {
           xl: "95%",
           md: "85%",

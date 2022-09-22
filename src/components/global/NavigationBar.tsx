@@ -40,7 +40,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                 fontSize: { md: "24px", xs: "20px" },
               }}
             >
-              Pratik Kapadia
+              <Link href={"/"}>Pratik Kapadia</Link>
             </Typography>
             <Typography
               sx={{
@@ -51,7 +51,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                 alignItems: "center",
               }}
             >
-              <Link href={"/"}>ABOUT</Link>
+              <Link href={"/about"}>ABOUT</Link>
             </Typography>
             <Typography
               sx={{
