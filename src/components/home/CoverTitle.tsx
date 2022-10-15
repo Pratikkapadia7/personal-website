@@ -30,7 +30,7 @@ const CoverTitle: React.FC<CoverTitleProps> = () => {
             margin: "auto",
           }}
         >
-          I'm Pratik Kapadia, I am a Software Engineer and I help companies
+          I&apos;m Pratik Kapadia, I am a Software Engineer and I help companies
           creating quality softwares.
         </Typography>
       </WidthControlledWrapper>

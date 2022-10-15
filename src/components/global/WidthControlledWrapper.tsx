@@ -13,7 +13,6 @@ const WidthControlledWrapper: React.FC<WidthControlledWrapperProps> = ({
       sx={{
         maxWidth: "1350px",
         width: {
-          xl: "95%",
           md: "85%",
           xs: "90%",
         },

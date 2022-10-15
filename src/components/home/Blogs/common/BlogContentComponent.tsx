@@ -50,7 +50,7 @@ const BlogContentComponent: React.FC<BlogContentComponentProps> = ({
         >
           {title}
         </Typography>
-        <a href={blogHref} target={"_blank"}>
+        <a href={blogHref} target={"_blank"} rel="noreferrer">
           <ArrowOutwardIcon color={"primary"} fontSize={"small"} />
         </a>
       </Box>

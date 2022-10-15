@@ -40,7 +40,9 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                 fontSize: { md: "24px", xs: "20px" },
               }}
             >
-              <Link href={"/"}>Pratik Kapadia</Link>
+              <Link href={"/"} rel="noreferrer">
+                Pratik Kapadia
+              </Link>
             </Typography>
             <Typography
               sx={{
@@ -51,7 +53,9 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                 alignItems: "center",
               }}
             >
-              <Link href={"/about"}>ABOUT</Link>
+              <Link href={"/about"} rel="noreferrer">
+                ABOUT
+              </Link>
             </Typography>
             <Typography
               sx={{
@@ -62,7 +66,9 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                 alignItems: "center",
               }}
             >
-              <Link href={"/"}>BLOG</Link>
+              <Link href={"/blog"} rel="noreferrer">
+                BLOG
+              </Link>
             </Typography>
           </Box>
           <Box
@@ -74,16 +80,33 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
               gap: "16px",
             }}
           >
-            <a href="/" target={"_blank"}>
+            <a
+              href="https://twitter.com/PratikKapadia12"
+              rel="noreferrer"
+              target={"_blank"}
+            >
               <TwitterIcon htmlColor={"#FFFFFF"} />
             </a>
-            <a href={"/"} target={"_blank"}>
+            <a
+              href={"https://www.linkedin.com/in/pratik-k-88b914a1/"}
+              rel="noreferrer"
+              target={"_blank"}
+            >
               <LinkedInIcon htmlColor={"#FFFFFF"} />
             </a>
-            <a href={"https://www.google.com/"} target={"_blank"}>
+            <a
+              href={"https://github.com/Pratikkapadia7"}
+              rel="noreferrer"
+              target={"_blank"}
+            >
               <GitHubIcon htmlColor={"#FFFFFF"} />
             </a>
-            <a href={"/"} target={"_blank"}>
+            <a
+              href={"mailto:hello@kapadiapratik.com"}
+              title={"Mail"}
+              rel="noreferrer"
+              target={"_blank"}
+            >
               <MailIcon htmlColor={"#FFFFFF"} />
             </a>
           </Box>

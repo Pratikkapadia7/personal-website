@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import WidthControlledWrapper from "./WidthControlledWrapper";
 import styles from "./FooterComponent.module.css";
+import Link from "next/link";
 
 interface FooterComponentProps {}
 
@@ -21,9 +22,9 @@ const FooterComponent: React.FC<FooterComponentProps> = () => {
           <Typography
             sx={{ color: "#D0D5DD", fontSize: "14px", fontWeight: "400" }}
           >
-            <a href="/" className={styles.linkTags}>
+            <Link href={"/"} className={styles.linkTags}>
               Pratik Kapadia
-            </a>{" "}
+            </Link>{" "}
             &copy; 2022
           </Typography>
           <Box sx={{ display: "flex", gap: "12px" }}>
@@ -34,9 +35,9 @@ const FooterComponent: React.FC<FooterComponentProps> = () => {
                 fontWeight: "400",
               }}
             >
-              <a href="/" className={styles.linkTags}>
+              <Link href={"/blogs"} className={styles.linkTags}>
                 Latest Posts
-              </a>
+              </Link>
             </Typography>
             <Typography
               sx={{
@@ -45,7 +46,12 @@ const FooterComponent: React.FC<FooterComponentProps> = () => {
                 fontWeight: "400",
               }}
             >
-              <a href="/" className={styles.linkTags}>
+              <a
+                href={"https://www.linkedin.com/in/pratik-k-88b914a1/"}
+                className={styles.linkTags}
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
                 LinkedIn
               </a>
             </Typography>
@@ -56,7 +62,12 @@ const FooterComponent: React.FC<FooterComponentProps> = () => {
                 fontWeight: "400",
               }}
             >
-              <a href="/" className={styles.linkTags}>
+              <a
+                href={"https://twitter.com/PratikKapadia12"}
+                className={styles.linkTags}
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
                 Twitter
               </a>
             </Typography>
@@ -67,7 +78,13 @@ const FooterComponent: React.FC<FooterComponentProps> = () => {
                 fontWeight: "400",
               }}
             >
-              <a href="/" className={styles.linkTags}>
+              <a
+                href={"mailto:hello@kapadiapratik.com"}
+                className={styles.linkTags}
+                title={"Mail"}
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
                 Mail
               </a>
             </Typography>
