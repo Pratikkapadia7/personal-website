@@ -131,11 +131,11 @@ const BlogDescriptionSection: React.FC<BlogDescriptionSectionProps> = () => {
             },
           }}
         >
-          Starting with the starting node, it's nothing but where your logic
-          starts you move on from node to node. As we move towards the node,
-          corezoid gives every response value at the end nodes. Corezoid also
-          has nodes based on code-logic, conditional statements and provides API
-          that we usually perform in our backend architecture.
+          Starting with the starting node, it&apos;s nothing but where your
+          logic starts you move on from node to node. As we move towards the
+          node, corezoid gives every response value at the end nodes. Corezoid
+          also has nodes based on code-logic, conditional statements and
+          provides API that we usually perform in our backend architecture.
         </Typography>
         <Typography
           component={"h3"}
