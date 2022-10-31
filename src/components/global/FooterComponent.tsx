@@ -23,22 +23,33 @@ const FooterComponent: React.FC<FooterComponentProps> = () => {
             sx={{ color: "#D0D5DD", fontSize: "14px", fontWeight: "400" }}
           >
             <Link href={"/"} className={styles.linkTags}>
-              Pratik Kapadia
-            </Link>{" "}
-            &copy; 2022
+              <Typography
+                sx={{
+                  color: "#D0D5DD",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                  cursor: "pointer",
+                }}
+                className={styles.linkTags}
+              >
+                Pratik Kapadia &copy; 2022
+              </Typography>
+            </Link>
           </Typography>
           <Box sx={{ display: "flex", gap: "12px" }}>
-            <Typography
-              sx={{
-                color: "#D0D5DD",
-                fontSize: "14px",
-                fontWeight: "400",
-              }}
-            >
-              <Link href={"/blogs"} className={styles.linkTags}>
+            <Link href={"/blogs"}>
+              <Typography
+                className={styles.linkTags}
+                sx={{
+                  color: "#D0D5DD",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                  cursor: "pointer",
+                }}
+              >
                 Latest Posts
-              </Link>
-            </Typography>
+              </Typography>
+            </Link>
             <Typography
               sx={{
                 color: "#D0D5DD",
