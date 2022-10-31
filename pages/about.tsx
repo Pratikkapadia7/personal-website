@@ -2,10 +2,21 @@ import { NextPage } from "next";
 import NavigationBar from "../src/components/global/NavigationBar";
 import { Box, Typography } from "@mui/material";
 import WidthControlledWrapper from "../src/components/global/WidthControlledWrapper";
+import Head from "next/head";
 
 const AboutUs: NextPage = () => {
   return (
     <Box>
+      <Head>
+        <title>About me</title>
+        <meta name="description" content="About Pratik Kapadia" />
+        <meta name="author" content="Pratik Kapadia" />
+        <meta
+          name="keywords"
+          content="Pratik, Kapadia, Portfolio, Frontend, Fullstack, Backend, Software Engineer, Engineer, Blogs,"
+        />
+        <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon" />
+      </Head>
       <NavigationBar />
       <WidthControlledWrapper>
         <Box sx={{ width: "80%", margin: "auto" }}>
