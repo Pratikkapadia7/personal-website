@@ -19,23 +19,19 @@ const FooterComponent: React.FC<FooterComponentProps> = () => {
     >
       <WidthControlledWrapper>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography
-            sx={{ color: "#D0D5DD", fontSize: "14px", fontWeight: "400" }}
-          >
-            <Link href={"/"} className={styles.linkTags}>
-              <Typography
-                sx={{
-                  color: "#D0D5DD",
-                  fontSize: "14px",
-                  fontWeight: "400",
-                  cursor: "pointer",
-                }}
-                className={styles.linkTags}
-              >
-                Pratik Kapadia &copy; 2022
-              </Typography>
-            </Link>
-          </Typography>
+          <Link href={"/"} className={styles.linkTags}>
+            <Typography
+              sx={{
+                color: "#D0D5DD",
+                fontSize: "14px",
+                fontWeight: "400",
+                cursor: "pointer",
+              }}
+              className={styles.linkTags}
+            >
+              Pratik Kapadia &copy; 2022
+            </Typography>
+          </Link>
           <Box sx={{ display: "flex", gap: "12px" }}>
             <Link href={"/blogs"}>
               <Typography
