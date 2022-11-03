@@ -7,10 +7,16 @@ import blogData from "../../../data/blogData";
 interface MainBlogComponentProps {}
 
 const MainBlogComponent: React.FC<MainBlogComponentProps> = () => {
+  const coverBlogData = blogData?.find(
+    (blogItems) => blogItems.slug === "corezoid-integration"
+  );
+  const listBlogData = blogData?.filter(
+    (blogItem) => blogItem.slug !== "corezoid-integration"
+  );
   return (
     <WidthControlledWrapper>
-      <TitleBlogComponent blogData={blogData.title} />
-      <BlogListingComponent blogData={blogData.list} />
+      {coverBlogData && <TitleBlogComponent blogData={coverBlogData} />}
+      <BlogListingComponent blogData={listBlogData} />
     </WidthControlledWrapper>
   );
 };

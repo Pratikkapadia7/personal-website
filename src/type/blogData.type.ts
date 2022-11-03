@@ -1,6 +1,7 @@
 import { BlogTagsTypeProps } from "./blogTags.type";
 
 export interface blogDataSingular {
+  slug: string;
   date: string;
   title: string;
   subTitle: string;
@@ -10,6 +11,10 @@ export interface blogDataSingular {
   imageData: {
     url: string;
     altData: string;
+  };
+  imageCourtesy?: {
+    name: string;
+    url: string;
   };
 }
 

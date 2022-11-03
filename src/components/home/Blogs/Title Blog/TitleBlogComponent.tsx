@@ -14,7 +14,7 @@ const TitleBlogComponent: React.FC<TitleBlogComponentProps> = ({
   return (
     <Box sx={{ cursor: "pointer", position: "relative" }}>
       <a
-        href={"/corezoid-integration"}
+        href={blogData.blogHref}
         style={{
           position: "absolute",
           height: "100%",

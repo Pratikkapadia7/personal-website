@@ -1,32 +1,32 @@
 import { NextPage } from "next";
 import { Box } from "@mui/material";
-import WidthControlledWrapper from "../src/components/global/WidthControlledWrapper";
+import Head from "next/head";
 import NavigationBar from "../src/components/global/NavigationBar";
-import React from "react";
+import WidthControlledWrapper from "../src/components/global/WidthControlledWrapper";
 import CoverSection from "../src/components/corezoid-integration/CoverSection";
-import FooterComponent from "../src/components/global/FooterComponent";
-import BlogDescriptionSection from "../src/components/corezoid-integration/BlogDescriptionSection";
+import BlogDescriptionSection from "../src/components/github-source/BlogDescriptionSection";
 import CustomDivider from "../src/components/common/CustomDivider";
 import MoreBlogsSection from "../src/components/common/MoreBlogsSection";
-import Head from "next/head";
+import FooterComponent from "../src/components/global/FooterComponent";
+import React from "react";
 import blogData from "../src/data/blogData";
 
-const CorezoidIntegration: NextPage = () => {
+const GithubSource: NextPage = () => {
   const singleBlogData = blogData?.find(
-    (blogItem) => blogItem.slug === "corezoid-integration"
+    (blogItem) => blogItem.slug === "github-source"
   );
   return (
     <>
       <Head>
-        <title>Corezoid Architecture Interface</title>
+        <title>Github Source</title>
         <meta
           name="description"
-          content="Initialization of Corezoid and exposing its endpoints to outside environment."
+          content="Where to find this project on GitHub.."
         />
         <meta name="author" content="Pratik Kapadia" />
         <meta
           name="keywords"
-          content="Pratik, Kapadia, Corezoid, Integration, architecture, endpoints, API"
+          content="Pratik, Kapadia, Github, Untitled, architecture, Design, Figma"
         />
         <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon" />
       </Head>
@@ -43,4 +43,4 @@ const CorezoidIntegration: NextPage = () => {
     </>
   );
 };
-export default CorezoidIntegration;
+export default GithubSource;

@@ -3,29 +3,13 @@ import { Box, Typography } from "@mui/material";
 import BlogTagComponent from "../home/Blogs/common/BlogTagComponent";
 import Image from "next/image";
 import { blogDataSingular } from "../../type/blogData.type";
-import ImageConfig from "../../utils/ImageConfig";
+import InsertLinkIcon from "@mui/icons-material/InsertLink";
 
-const corezoidIntegrationData: blogDataSingular = {
-  date: "23 Sept 2022",
-  title: "Corezoid Architecture Interface",
-  subTitle:
-    "How do you initiate Corezoid and expose its endpoints to outside environment?",
-  blogHref: "/",
-  blogTags: [
-    { text: "Design", blogTagKey: "PrimaryPurple" },
-    { text: "Research", blogTagKey: "Indigo" },
-    { text: "Architecture", blogTagKey: "BlueLight" },
-  ],
-  blogType: "title",
-  imageData: {
-    url: ImageConfig.COREZOID_WALLPAPER,
-    altData: "Corezoid Wallpaper",
-  },
-};
+interface CoverSectionProps {
+  blogData: blogDataSingular;
+}
 
-interface CoverSectionProps {}
-
-const CoverSection: React.FC<CoverSectionProps> = ({}) => {
+const CoverSection: React.FC<CoverSectionProps> = ({ blogData }) => {
   return (
     <Box
       sx={{
@@ -56,7 +40,7 @@ const CoverSection: React.FC<CoverSectionProps> = ({}) => {
             mb: "12px",
             fontSize: { xs: "14px", md: "16px" },
           }}
-        >{`Published ${corezoidIntegrationData.date}`}</Typography>
+        >{`Published ${blogData.date}`}</Typography>
         <Typography
           sx={{
             color: "#101828",
@@ -72,7 +56,7 @@ const CoverSection: React.FC<CoverSectionProps> = ({}) => {
             },
           }}
         >
-          {corezoidIntegrationData.title}
+          {blogData.title}
         </Typography>
         <Typography
           sx={{
@@ -89,40 +73,72 @@ const CoverSection: React.FC<CoverSectionProps> = ({}) => {
             },
           }}
         >
-          {corezoidIntegrationData.subTitle}
+          {blogData.subTitle}
         </Typography>
         <Box sx={{ display: "flex", gap: "8px", marginTop: "24px" }}>
-          {corezoidIntegrationData.blogTags.map(
-            ({ text, blogTagKey }, index) => {
-              return (
-                <BlogTagComponent
-                  key={`${index}${text}`}
-                  text={text}
-                  blogTagKey={blogTagKey}
-                />
-              );
-            }
-          )}
+          {blogData.blogTags.map(({ text, blogTagKey }, index) => {
+            return (
+              <BlogTagComponent
+                key={`${index}${text}`}
+                text={text}
+                blogTagKey={blogTagKey}
+              />
+            );
+          })}
         </Box>
       </Box>
       <Box
         sx={{
-          position: "relative",
-          height: {
-            md: "560px",
-            xs: "240px",
-          },
           width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          gap: "4px",
         }}
       >
-        <Image
-          src={corezoidIntegrationData.imageData.url}
-          alt={corezoidIntegrationData.imageData.altData}
-          layout={"fill"}
-          objectFit={"cover"}
-          width={"100%"}
-          height={"100%"}
-        />
+        <Box
+          sx={{
+            position: "relative",
+            height: {
+              md: "560px",
+              xs: "240px",
+            },
+            width: "100%",
+          }}
+        >
+          <Image
+            src={blogData.imageData.url}
+            alt={blogData.imageData.altData}
+            layout={"fill"}
+            objectFit={"cover"}
+            width={"100%"}
+            height={"100%"}
+          />
+        </Box>
+        {blogData?.imageCourtesy && (
+          <Box
+            sx={{
+              display: "flex",
+              gap: "4px",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <InsertLinkIcon />
+            <Typography sx={{ fontSize: "14px", color: "#475467" }}>
+              Image courtesy of{" "}
+              <span
+                style={{
+                  textDecoration: "underline",
+                }}
+              >
+                {" "}
+                <a href={blogData?.imageCourtesy?.url} target={"_blank"}>
+                  {blogData?.imageCourtesy?.name}
+                </a>{" "}
+              </span>
+            </Typography>
+          </Box>
+        )}
       </Box>
     </Box>
   );
