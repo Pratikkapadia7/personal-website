@@ -15,6 +15,9 @@ const GithubSource: NextPage = () => {
   const singleBlogData = blogData?.find(
     (blogItem) => blogItem.slug === "github-source"
   );
+  const moreBlogData = blogData?.filter(
+    (blogItem) => blogItem.slug !== "github-source"
+  );
   return (
     <>
       <Head>
@@ -36,7 +39,7 @@ const GithubSource: NextPage = () => {
           {singleBlogData && <CoverSection blogData={singleBlogData} />}
           <BlogDescriptionSection />
           <CustomDivider />
-          <MoreBlogsSection />
+          <MoreBlogsSection moreBlogData={moreBlogData} />
         </WidthControlledWrapper>
         <FooterComponent />
       </Box>

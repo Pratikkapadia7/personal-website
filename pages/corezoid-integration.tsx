@@ -15,6 +15,9 @@ const CorezoidIntegration: NextPage = () => {
   const singleBlogData = blogData?.find(
     (blogItem) => blogItem.slug === "corezoid-integration"
   );
+  const moreBlogData = blogData?.filter(
+    (blogItem) => blogItem.slug !== "corezoid-integration"
+  );
   return (
     <>
       <Head>
@@ -36,7 +39,7 @@ const CorezoidIntegration: NextPage = () => {
           {singleBlogData && <CoverSection blogData={singleBlogData} />}
           <BlogDescriptionSection />
           <CustomDivider />
-          <MoreBlogsSection />
+          <MoreBlogsSection moreBlogData={moreBlogData} />
         </WidthControlledWrapper>
         <FooterComponent />
       </Box>

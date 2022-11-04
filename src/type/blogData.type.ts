@@ -11,6 +11,7 @@ export interface blogDataSingular {
   imageData: {
     url: string;
     altData: string;
+    type: "DARK" | "LIGHT";
   };
   imageCourtesy?: {
     name: string;

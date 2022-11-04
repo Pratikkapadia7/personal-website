@@ -17,6 +17,7 @@ const blogData: Array<blogDataSingular> = [
     imageData: {
       url: ImageConfig.COREZOID_WALLPAPER,
       altData: "Corezoid Wallpaper",
+      type: "LIGHT",
     },
   },
   {
@@ -34,6 +35,7 @@ const blogData: Array<blogDataSingular> = [
     imageData: {
       url: ImageConfig.GITHUB_SOURCE_COVER_IMAGE,
       altData: "Github Source Cover Image",
+      type: "DARK",
     },
     imageCourtesy: {
       name: "Yancy Min",
@@ -56,6 +58,7 @@ const blogData: Array<blogDataSingular> = [
     imageData: {
       url: ImageConfig.MAIN_BLOG_WALLPAPER,
       altData: "Main Blog Wallpaper",
+      type: "LIGHT",
     },
   },
 ];
